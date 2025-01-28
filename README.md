@@ -38,6 +38,7 @@ Pour exécuter ce projet sur votre machine locale, vous devez avoir Python 3.x i
 1. **Clonez le dépôt sur votre machine locale** :
 ```bash
 git clone https://github.com/votre-utilisateur/PCA_KMeans_Kaggle.git
+#
 2. **Accédez au répertoire cloné** :
 ```bash
 cd PCA_KMeans_Kaggle
