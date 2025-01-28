@@ -34,7 +34,15 @@ Pour exécuter ce projet sur votre machine locale, vous devez avoir Python 3.x i
 - `matplotlib`
 - `scikit-learn`
 
-Vous pouvez installer ces bibliothèques en exécutant la commande suivante dans votre terminal (si vous avez un fichier `requirements.txt`) :
-
+### Étapes pour exécuter le projet
+1. **Clonez le dépôt sur votre machine locale** :
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/votre-utilisateur/PCA_KMeans_Kaggle.git
+2. **Accédez au répertoire cloné** :
+```bash
+cd PCA_KMeans_Kaggle
+3. **Lancez Jupyter Notebook pour ouvrir le fichier** :
+```bash
+jupyter notebook PCA_KMeans_Clustering.ipynb
+4. **Suivez les étapes dans le notebook pour exécuter le projet.**
+
