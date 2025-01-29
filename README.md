@@ -16,6 +16,8 @@ Répertoire du Projet
 |-- marketing_campaign.csv        # Fichier CSV contenant les données de la campagne marketing
 |-- notebook651aaf7c99.ipynb      # Notebook Jupyter contenant l'analyse complète (PCA, KMeans, Visualisations)
 |-- README.md
+```
+
 ## Jeu de Données
 Le jeu de données utilisé pour ce projet provient d'une campagne marketing et contient des informations sur les clients, leurs caractéristiques démographiques et leurs comportements d'achat. Vous pouvez trouver le fichier CSV dans le répertoire du projet sous le nom marketing_campaign.csv.
 
