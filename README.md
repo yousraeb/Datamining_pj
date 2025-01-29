@@ -1,49 +1,70 @@
-# Clustering PCA et KMeans sur Kaggle
+# Projet d'Analyse de Campagne Marketing avec PCA et KMeans
 
-Ce dépôt contient un projet réalisé sur Kaggle, utilisant une combinaison de l'analyse en composantes principales (PCA) et du clustering KMeans pour analyser un ensemble de données.
+## Aperçu
+Ce projet explore l'application de la réduction de dimensionnalité avec PCA (Principal Component Analysis) et le clustering avec KMeans sur les données d'une campagne marketing. Le but est d'analyser les caractéristiques des clients et de les regrouper en différents segments pour mieux comprendre les comportements d'achat.
 
-### Objectif du projet
-L'objectif de ce projet est d'appliquer l'algorithme de PCA pour réduire la dimensionnalité d'un jeu de données et d'utiliser l'algorithme de KMeans pour effectuer un clustering. Ensuite, nous visualiserons les résultats obtenus sous forme de graphiques pour comprendre la distribution des données et des clusters.
+Les étapes principales du projet incluent :
+1. Prétraitement des données.
+2. Application de PCA pour réduire la dimensionnalité.
+3. Application de KMeans pour segmenter les clients en différents groupes.
 
-### Étapes du projet
-1. **Prétraitement des données** : 
-   - Chargement et nettoyage des données.
-   - Mise à l'échelle des données pour les rendre compatibles avec les algorithmes de PCA et KMeans.
-   
-2. **Application de PCA** : 
-   - Réduction des dimensions du jeu de données pour obtenir les deux principales composantes.
-   
-3. **Application de KMeans** : 
-   - Clustering des données réduites en deux dimensions à l'aide de l'algorithme KMeans.
-   - Identification des clusters formés.
+## Structure du Projet
+Le projet est organisé comme suit :
+```plaintext
+Répertoire du Projet
+|
+|-- marketing_campaign.csv        # Fichier CSV contenant les données de la campagne marketing
+|-- notebook651aaf7c99.ipynb      # Notebook Jupyter contenant l'analyse complète (PCA, KMeans, Visualisations)
+|-- README.md
+## Jeu de Données
+Le jeu de données utilisé pour ce projet provient d'une campagne marketing et contient des informations sur les clients, leurs caractéristiques démographiques et leurs comportements d'achat. Vous pouvez trouver le fichier CSV dans le répertoire du projet sous le nom marketing_campaign.csv.
 
-4. **Visualisation** : 
-   - Création de graphiques pour afficher les résultats du clustering et la distribution des données dans l'espace réduit.
+## Flux de Travail
 
-### Structure du projet
-Le projet est structuré de manière à être facilement compréhensible et réutilisable. Les fichiers principaux sont les suivants :
+### 1. Pré-traitement des Données
+Le jeu de données est chargé depuis le fichier marketing_campaign.csv et les étapes suivantes sont réalisées :
+   -Nettoyage des valeurs manquantes.
+   -Transformation des données catégorielles en variables numériques si nécessaire.
+   -Normalisation des données pour le clustering et la réduction de dimensionnalité.
 
-- `PCA_KMeans_Clustering.ipynb` : Le notebook principal contenant l'analyse des données, la réduction de dimension avec PCA, et l'application de KMeans pour le clustering.
-- `requirements.txt` : Ce fichier contient toutes les dépendances nécessaires pour exécuter le projet localement.
-- `data/` : Ce répertoire contient les fichiers de données utilisés pour l'analyse (si applicable).
+### 2. Application de PCA (Réduction de Dimensionnalité)
+-PCA est appliqué pour réduire la dimensionnalité des données tout en préservant l'essentiel de l'information.
+-Le notebook présente la variance expliquée par chaque composant principal.
 
-### Pré-requis
-Pour exécuter ce projet sur votre machine locale, vous devez avoir Python 3.x installé ainsi que les bibliothèques suivantes :
-- `numpy`
-- `pandas`
-- `matplotlib`
-- `scikit-learn`
+### 3. Application de KMeans (Clustering)
+Chaque ensemble de caractéristiques sélectionné est testé avec trois algorithmes de classification :
 
-### Étapes pour exécuter le projet
-1. **Clonez le dépôt sur votre machine locale** :
-```bash
-git clone https://github.com/votre-utilisateur/PCA_KMeans_Kaggle.git
-#
-2. **Accédez au répertoire cloné** :
-```bash
-cd PCA_KMeans_Kaggle
-3. **Lancez Jupyter Notebook pour ouvrir le fichier** :
-```bash
-jupyter notebook PCA_KMeans_Clustering.ipynb
-4. **Suivez les étapes dans le notebook pour exécuter le projet.**
+- L'algorithme KMeans est utilisé pour segmenter les clients en différents groupes basés sur leurs caractéristiques.
+- Le nombre optimal de clusters est déterminé à l'aide de la méthode du coude et les résultats sont visualisés.
+
+### 4. Visualisations et Résultats
+- Des visualisations sont générées dans le notebook pour illustrer les segments de clients obtenus après le clustering.
+- Le notebook présente des graphiques pour mieux comprendre les clusters et leurs caractéristiques principales.
+
+## Comment Exécuter le Projet
+1. Clonez le répertoire :
+   ```bash
+   git clone <repository_link>
+   ```
+2. Installez les packages Python requis :
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Ouvrez le notebook Jupyter pour exécuter l'analyse :
+   ```bash
+   jupyter notebook notebook651aaf7c99.ipynb
+   ```
+4. Suivez les étapes dans le notebook pour effectuer le prétraitement, appliquer PCA et KMeans, et générer des visualisations.
+
+## Résultats 
+Les résultats de l'analyse seront générés dans le notebook. Les visualisations des clusters et la variance expliquée par PCA seront affichées directement dans le notebook. Assurez-vous de vérifier les graphiques générés pour mieux comprendre les segments créés.
+
+## Travaux Futurs
+- Tester d'autres techniques de réduction de dimensionnalité comme t-SNE ou UMAP.
+- Appliquer d'autres algorithmes de clustering, comme DBSCAN, pour comparer les résultats.
+- Intégrer des données supplémentaires pour enrichir l'analyse et les segments clients.
+
+---
+
+Pour toute question ou contribution, n'hésitez pas à nous contacter !
 
